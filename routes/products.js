@@ -95,7 +95,8 @@ router.put("/:id", async (req, res) => {
       { name, price, category, stock },
       { new: true, runValidators: true }
     );
-
+ 
+  
     if (!product) return res.status(404).json({ error: "Product not found" });
     res.json(product);
   } catch (err) {
